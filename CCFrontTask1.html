@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Dawid Przydróżny">
+    <meta name="description" content="Task 1 for Clearcode Frontend Intern">
+    <title>CLEARCODE</title>
+    <style>
+        /* 
+            Styles are made simple way, I deem that it's not worth to 
+            use preprocessors like Sass here (might be nonsense) or other
+            css methodology.
+            BUT if it's you might wan't to see here, let me know and
+            I made this for you with css BEM methodology or Sass.
+            I just want to say that I'm aware of making paragraph tag
+            wide like p { } is not good idea in bigger projects. 
+
+        GENERAL STYLES */
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #FFFF99;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .container {
+            margin: 100px auto;
+            width: 50%;
+        }
+
+        /* LI STYLES */
+
+        /* general styles for li items */
+        li {
+            background-color: #EEEEEE;
+            border: 1px solid #999999;
+            width: 50%;
+            padding: 5px;
+            margin-bottom: -1px;
+            box-shadow: 2px 2px 4px #999999;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        /* li first element */
+        li:first-child {
+            border-radius: 5px;
+            border-bottom-right-radius: 0;
+            color: #999999;
+        }
+
+        /* li odd */
+        li:nth-child(2n + 3){
+            border-radius: 0;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            color: #999999;
+        }
+
+        /* li even */
+        li:nth-child(even){
+            margin-left: 20px;
+            border-radius: 0;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        /* li last element, if even */
+        li:last-child:nth-child(even) {
+            border-radius: 5px;
+            border-top-left-radius: 0;
+        }
+
+        /* li last element, if odd */
+        li:last-child:nth-child(odd) {
+            border-radius: 5px;
+            border-top-right-radius: 0;
+        }
+
+        /* li first element, if its only one existing*/
+        li:first-child:nth-child(odd) {
+            border-radius: 5px;
+        }
+
+        /* paragraph inside li element */
+        p {
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* SPAN STYLES */
+        span {
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        li:nth-child(odd) span {
+            color: #000000;
+        }
+
+        li:nth-child(even) span {
+            color: #999999;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- May be not perfect orginized code but
+         I think in this case it's readable. -->
+
+    <div class="container">
+        <ul>
+            <li><p>Short text</p>
+                <span>Is short</span></li>
+
+            <li><p>A little bit longer text</p>
+                <span>Is longer</span></li>
+
+            <li><p>Also a little bit longer</p>
+                <span>Yes it is</span></li>
+
+            <li><p>A long text is here, totally for no reason</p>
+                <span>Is long.</span></li>
+
+            <li><p>A long text is here also, for the same reason</p>
+                <span>Is long too!</span></li>
+
+            <li><p>OK</p>
+                <span>OK</span></li>
+
+        </ul>
+    </div>
+    <script src="ok.js"></script>
+</body>
+</html>
